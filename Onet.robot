@@ -3,11 +3,13 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}          http://www.poczta.onet.pl/
-${BROWSER}      Chrome
+${BROWSER}      Firefox
 @{list} =   Niepoprawny e-mail lub hasło.   Wprowadź poprawne dane.
 
 *** Test Cases ***
 Valid Login
+    [Tags]  Valid
+    [Documentation]  This test case check app when user use valid credentials
     Open main page
     Rodo
     Input Username
@@ -17,6 +19,8 @@ Valid Login
     [Teardown]    Close Browser
 
 Invalid Login
+    [Tags]  Invalid
+    [Documentation]  This test case check app when user use invalid credentials
     Open main page
     Rodo
     Input invalid login
