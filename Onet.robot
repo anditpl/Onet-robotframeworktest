@@ -1,5 +1,6 @@
 *** Settings ***
-Library  SeleniumLibrary
+Library  SeleniumLibrary  screenshot_root_directory=\screenshot
+
 
 *** Variables ***
 ${LOGIN URL}          http://www.poczta.onet.pl/
@@ -45,6 +46,7 @@ User clicks the login button
     click element  css=input.loginButton
 User see the email list
     page should contain element  id=NewMail-button
+    Capture Page Screenshot  maillist.png
 User input the invalid login
     Input Text	id=f_login  blednylogin@onet.pl
 User input the invalid password
@@ -53,3 +55,4 @@ User see an alert about incorrect attempt to log in
     wait until element is visible   class=messageContent
     get text  class=messageContent
     Should Contain Any	${list}	Niepoprawny e-mail lub hasło.   Wprowadź poprawne dane.
+    Capture Page Screenshot  alert.png
