@@ -10,46 +10,46 @@ ${BROWSER}      Firefox
 Valid Login
     [Tags]  Valid
     [Documentation]  This test case check app when user use valid credentials
-    Open main page
-    Rodo
-    Input Username
-    Input Password
-    Login button
-    Assert Onet Mail
+    Given User is in Onet Poczta site and is not logged in
+    And User clicks the Rodo button
+    And User inputs the username
+    And User inputs the password
+    When User clicks the login button
+    Then User see the email list
     [Teardown]    Close Browser
 
 Invalid Login
     [Tags]  Invalid
     [Documentation]  This test case check app when user use invalid credentials
-    Open main page
-    Rodo
-    Input invalid login
-    Input invalid password
-    Login button
-    Assert invalid
+    Given User is in Onet Poczta site and is not logged in
+    And User clicks the Rodo button
+    And User input the invalid login
+    And User input the invalid password
+    When User clicks the login button
+    Then User see an alert about incorrect attempt to log in
     [Teardown]  close browser
 
 *** Keywords ***
 
-Open main page
+User is in Onet Poczta site and is not logged in
     Open browser    ${LOGIN URL}   ${BROWSER}
     Title Should Be    Onet Poczta – najlepsza skrzynka pocztowa
-Rodo
+User clicks the Rodo button
     wait until element is visible  css=button.cmp-button_button.cmp-intro_acceptAll
     Click Element  css=button.cmp-button_button.cmp-intro_acceptAll
-Input Username
+User inputs the username
     Input Text	id=f_login	validmail@onet.pl
-Input password
+User inputs the password
     Input Text  id=f_password   validpassword
-Login button
+User clicks the login button
     click element  css=input.loginButton
-Assert Onet Mail
+User see the email list
     page should contain element  id=NewMail-button
-Input invalid login
+User input the invalid login
     Input Text	id=f_login  blednylogin@onet.pl
-Input invalid password
+User input the invalid password
     Input Text  id=f_password   blednehaslo1
-Assert invalid
+User see an alert about incorrect attempt to log in
     wait until element is visible   class=messageContent
     get text  class=messageContent
     Should Contain Any	${list}	Niepoprawny e-mail lub hasło.   Wprowadź poprawne dane.
