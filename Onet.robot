@@ -1,11 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary  screenshot_root_directory=\screenshot
 Resource  Resources/Onet.robot
-
-*** Variables ***
-${LOGIN URL}          http://www.poczta.onet.pl/
-${BROWSER}      Firefox
-@{list} =   Niepoprawny e-mail lub hasło.   Wprowadź poprawne dane.
+Resource  Resources/Locators.robot
 
 *** Test Cases ***
 Valid Login
