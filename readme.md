@@ -13,3 +13,11 @@ In cmd use:
 $ robot Onet.robot
 
 ```
+Run on the different browser:
+
+Use variable BROWSER for example Chrome, Firefox, Edge, ie
+Make sure that driver is in the path.
+
+```sh
+$ robot -v BROWSER:Chrome Onet.robot
+```
