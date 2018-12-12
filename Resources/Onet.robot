@@ -10,8 +10,8 @@ User is in Onet Poczta site and is not logged in
     Open browser    ${LOGIN URL}   ${BROWSER}
     Title Should Be    Onet Poczta – najlepsza skrzynka pocztowa
 User clicks the Rodo button
-    wait until element is visible  ${rodo}
-    Click Element  ${rodo}
+    Run Keyword And Ignore Error  wait until element is visible  ${rodo}
+    Run Keyword And Ignore Error  Click Element  ${rodo}
 User inputs the username
     Input Text	${login}	validmail@onet.pl
 User inputs the password
