@@ -1,9 +1,12 @@
 *** Settings ***
 Library  SeleniumLibrary  screenshot_root_directory=\screenshot
+Library  Dialogs
 
 *** Keywords ***
 
 User is in Onet Poczta site and is not logged in
+    ${new_browser} =  Get Selection From User  In which browser you want to run the test?  chrome  firefox  edge
+    Set Global Variable  ${BROWSER}  ${new_browser}
     Open browser    ${LOGIN URL}   ${BROWSER}
     Title Should Be    Onet Poczta – najlepsza skrzynka pocztowa
 User clicks the Rodo button
