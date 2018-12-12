@@ -23,6 +23,12 @@ pip uninstall robotframework
 ```
 You can find webdriver in [Selenium Website](https://www.seleniumhq.org/)
 
+Install SeleniumLibrary:
+
+```sh
+pip install robotframework-selenium2library
+```
+
 ### How to run
 
 In cmd use:
