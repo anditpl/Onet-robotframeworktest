@@ -3,8 +3,6 @@ Library  SeleniumLibrary  screenshot_root_directory=\screenshot
 Resource  Resources/Onet.robot
 Resource  Resources/Locators.robot
 
-TEST
-
 Suite Setup  Open the browser
 
 *** Test Cases ***
