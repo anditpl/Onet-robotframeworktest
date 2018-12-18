@@ -10,4 +10,4 @@ ${loginButton} =  css=input.loginButton
 ${login} =  id=f_login
 ${password} =  id=f_password
 ${mailList} =  id=NewMail-button
-${alert} =  class=messageContent
+${alert} =  css=#loginForm>div.header>div>div.messageContent>strong
