@@ -3,7 +3,8 @@ Library   SeleniumLibrary  screenshot_root_directory=\screenshot
 Resource  Resources/Onet.robot
 Resource  Resources/Locators.robot
 
-Test Setup    Open the browser
+Test Setup        Open the browser
+Test Teardown     Close Browser
 
 *** Test Cases ***
 Valid Login
@@ -15,7 +16,6 @@ Valid Login
     And User inputs the password
     When User clicks the login button
     Then User is on mailbox page
-    [Teardown]    Close Browser
 
 Invalid Login
     [Tags]  Invalid
@@ -26,4 +26,3 @@ Invalid Login
     And User input the invalid password
     When User clicks the login button
     Then User see an alert about incorrect attempt to log in
-    [Teardown]  close browser
