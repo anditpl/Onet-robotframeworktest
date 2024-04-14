@@ -17,12 +17,22 @@ Valid Login
     When User clicks the login button
     Then User is on mailbox page
 
-Invalid Login
+Invalid Login and Password
     [Tags]  Invalid
     [Documentation]  This test case check app when user use invalid credentials
     Given User is in Onet Poczta site and is not logged in
     And User clicks the Rodo button
     And User input the invalid login
+    And User input the invalid password
+    When User clicks the login button
+    Then User see an alert about incorrect attempt to log in
+
+Valid Login and invalid Password
+    [Tags]  Invalid
+    [Documentation]  This test case check app when user use invalid credentials
+    Given User is in Onet Poczta site and is not logged in
+    And User clicks the Rodo button
+    And User inputs the username
     And User input the invalid password
     When User clicks the login button
     Then User see an alert about incorrect attempt to log in

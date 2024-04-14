@@ -1,6 +1,5 @@
 *** Settings ***
 Library      SeleniumLibrary  screenshot_root_directory=\screenshot
-Library      Dialogs
 Library      OperatingSystem
 Resource     Locators.robot
 
