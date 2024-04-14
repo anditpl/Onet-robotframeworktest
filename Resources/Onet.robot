@@ -26,7 +26,7 @@ User clicks the login button
     click element  ${loginButton}
 
 User is on mailbox page
-    Wait Until Element Is Visible   ${new_mail_button}  timeout=20
+    Wait Until Element Is Visible   ${new_mail_button}
     Page should contain element  ${new_mail_button}
     Capture Page Screenshot  maillist.png
 

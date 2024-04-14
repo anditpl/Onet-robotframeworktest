@@ -1,9 +1,9 @@
 *** Settings ***
-Library  SeleniumLibrary  screenshot_root_directory=\screenshot
+Library   SeleniumLibrary  screenshot_root_directory=\screenshot
 Resource  Resources/Onet.robot
 Resource  Resources/Locators.robot
 
-Suite Setup  Open the browser
+Test Setup    Open the browser
 
 *** Test Cases ***
 Valid Login
