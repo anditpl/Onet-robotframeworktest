@@ -10,7 +10,6 @@ Open the browser
     Open browser    ${LOGIN URL}   ${BROWSER}
 
 User is in Onet Poczta site and is not logged in
-    Open browser    ${LOGIN URL}   ${BROWSER}
     Title Should Be    Logowanie Poczta Onet | Bezpieczna i darmowa poczta e-mail
 
 User clicks the Rodo button
