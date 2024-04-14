@@ -3,11 +3,11 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}          http://www.poczta.onet.pl/
-${BROWSER}      Firefox
+${BROWSER}      Chrome
 @{list} =   Niepoprawny e-mail lub hasło.   Wprowadź poprawne dane.
 ${rodo} =  css=button.cmp-button_button.cmp-intro_acceptAll
-${loginButton} =  css=input.loginButton
-${login} =  id=f_login
-${password} =  id=f_password
-${mailList} =  id=NewMail-button
-${alert} =  css=#loginForm>div.header>div>div.messageContent>strong
+${loginButton} =  css=.bTIEFn
+${login} =  id=email
+${password} =  id=password
+${new_mail_button} =  xpath=//span[contains(text(),'Napisz wiadomość')]
+${alert} =  css=.hitDDR

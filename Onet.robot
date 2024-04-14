@@ -14,7 +14,7 @@ Valid Login
     And User inputs the username
     And User inputs the password
     When User clicks the login button
-    Then User see the email list
+    Then User is on mailbox page
     [Teardown]    Close Browser
 
 Invalid Login
