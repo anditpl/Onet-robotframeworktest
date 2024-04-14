@@ -26,7 +26,7 @@ You can find webdriver in [Selenium Website](https://www.seleniumhq.org/)
 Install SeleniumLibrary:
 
 ```sh
-pip install robotframework-selenium2library
+pip install robotframework-seleniumlibrary
 ```
 
 ### How to run
